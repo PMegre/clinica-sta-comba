@@ -1,0 +1,941 @@
+/*
+        Theme Name: Clínica Dr. Santa Comba
+        Theme URI: http://www.miligram.pt/wp-themes/clinica-sta-comba/
+        Description: HTML5 Bootstrap alpha.6 
+        Version: 1.0.5
+        Author: Miligram Design
+        Author URI: http://www.miligram.pt
+        Tags: HTML5, CSS3, jQuery
+
+*/
+
+/*------------------------------------*\
+    MAIN
+\*------------------------------------*/
+
+/* global box-sizing */
+*,
+*:after,
+*:before {
+   -moz-box-sizing:border-box;
+   box-sizing:border-box;
+   -webkit-font-smoothing:antialiased;
+   font-smoothing:antialiased;
+   text-rendering:optimizeLegibility;
+}
+/* html element 62.5% font-size for REM use */
+html {
+   font-size:62.5%;
+}
+body {
+   font:300 11px/1.4 "din-2014",sans-serif;
+   color: rgba(105,96,87, 1);
+   overflow-x: hidden;
+}
+/* clear */
+.clear:before,
+.clear:after {
+   content:' ';
+   display:table;
+}
+
+.clear:after {
+   clear:both;
+}
+.clear {
+   *zoom:1;
+}
+img {
+   max-width:100%;
+   vertical-align:bottom;
+}
+a {
+   color:#444;
+   text-decoration:none;
+   transition: all .4s;
+}
+a:hover {
+   color:#444;
+   text-decoration: none;
+}
+a:focus {
+   outline:0;
+   text-decoration: none;
+}
+a:hover,
+a:active {
+   outline:0;
+   text-decoration: none;
+}
+
+input:focus {
+   outline:0;
+   border:1px solid #04A4CC;
+}
+
+
+
+/*------------------------------------*\
+    STRUCTURE
+\*------------------------------------*/
+
+/* wrapper */
+.wrapper {
+   position:relative;
+}
+
+.color-brown {
+   background-color: rgba(53,48,44, 1);
+}
+.color-lightbrown {
+   background-color: rgba(120,110,99, .4);
+}
+.color-darkbrown {
+   background-color: rgba(120,110,99, 1);
+}
+.color-blue {
+   background-color: rgba(101,166,184, 1);
+}
+
+/* header */
+header {
+   padding: 30px 6% 20px;
+}
+/* logo */
+.logo {
+
+}
+.logo-img {
+   height: 100px;
+}
+.nav {
+   float: right;
+}
+.nav > ul {
+   margin: 0;
+}
+.nav > ul > li {
+   display: inline-block;
+   margin-right: 30px;
+}
+.nav > ul > li:last-child {
+   margin-right: 0px;
+}
+.nav > ul > li > a {
+   font-size: 16px;
+   letter-spacing: .4px;
+   font-weight: 500;
+   color: rgba(120,110,99, 1);
+   text-transform: uppercase;
+}
+.nav > ul > li > a:hover {
+   color: rgba(101,166,184, 1);
+}
+.nav .sub-menu {
+   margin: 0;
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   text-align: left;
+   display: none;
+   position: absolute;
+   border-top: 4px solid rgba(101,166,184, 1);
+   background-color: #f9f9f9;
+   width: auto;
+   min-width: 200px;
+   box-shadow: 0px 4px 16px 0px rgba(0,0,0,0.1);
+   padding-top: 12px;
+   z-index: 1;
+}
+.nav .sub-menu > li {
+   padding-bottom: 12px;
+   padding-top: 12px;
+   border-bottom: 1px solid rgba(120,110,99, 1);
+}
+.nav .sub-menu > li:last-child {
+   border-bottom: none;
+}
+.nav .sub-menu > li > a {
+   padding-left: 12px;
+   padding-right: 12px;
+   display: block;
+   font-size: 14px;
+   font-weight: 300;
+   color: rgba(120,110,99, 1);
+}
+.nav .sub-menu > li > a:hover {
+   color: rgba(101,166,184, 1);
+}
+.nav .dropdown:hover .sub-menu {
+   display: block;
+   animation: fade .4s;
+}
+@keyframes fade {
+   0% {
+      opacity: 0;
+   }
+
+   100% {
+      opacity: 1;
+   }
+}
+
+#menu-toxina-botolimica li:nth-child(1), 
+#menu-toxina-botolimica li:nth-child(2) {
+   padding-left: 18px;
+}
+
+.page-contents.services.color-lightbrown #menu-toxina-botolimica li:nth-child(1), 
+.page-contents.services.color-lightbrown #menu-toxina-botolimica li:nth-child(2) {
+   padding-left: 0px;
+}
+
+/* footer */
+.footer {
+   padding: 70px 6%;
+}
+.footer .footer-logo {
+   height: 80px;
+}
+.footer h4 {
+   font-size: 16px;
+   line-height: 16px;
+   font-weight: 500;
+   margin-bottom: 15px;
+   color: rgba(255,255,255, 1);
+}
+.footer p {
+   font-size: 14px;
+   font-weight: 300;
+   font-style: italic;
+   margin-top: 15px;
+   color: rgba(255,255,255, .7);
+}
+.footer nav ul {
+   margin: 0;
+   padding: 0;
+   list-style: none;
+}
+.footer nav li {
+   margin-bottom: 10px;
+}
+.footer nav li:last-child {
+   margin-bottom: 0px;
+}
+.footer nav a {
+   color: rgba(255,255,255, .8);
+   text-transform: uppercase;
+   font-size: 15px;
+   font-weight: 500;
+}
+.copyright {
+   margin: 0;
+   text-align: center;
+   padding: 25px 0px;
+   color: rgba(255,255,255, .5);
+}
+.copyright a {
+   color: rgba(255,255,255, 1);
+}
+
+/*------------------------------------*\
+    TOP BAR
+\*------------------------------------*/
+
+.top-bar {
+   display: block;
+   padding: 0px 6%;
+   font-size: 11px;
+   text-align: center;
+}
+.top-bar ul {
+   text-align: right;
+   margin: 0;
+   padding: 0;
+}
+.top-bar li {
+   display: inline-block;
+   padding: 10px 40px;
+   margin-right: -4px;
+}
+.top-bar a {
+   font-weight: 400;
+   line-height: 20px;
+   color: rgba(105,96,87, 1);
+}
+.top-bar a:hover {
+   color: rgba(105,96,87, .7);
+}
+.top-bar .img-top-icons {
+   height: 20px;
+   margin-right: 10px;
+}
+.top-bar .color-brown a {
+   color: rgba(255,255,255, .5);
+}
+
+
+
+/*------------------------------------*\
+    PAGES
+\*------------------------------------*/
+
+.page-contents {
+   padding: 50px 6%;
+}
+.page-contents h1 {
+   margin-top: 0;
+   font-size: 34px;
+   font-weight: 300;
+   padding-bottom: 20px;
+   border-bottom: 1px solid rgba(61,61,63, 1);
+   margin-bottom: 40px;
+   text-transform: uppercase;
+}
+.page-contents h1.small {
+   margin-top: 30px;
+   font-size: 18px;
+   font-weight: 300;
+   padding-bottom: 15px;
+   border-bottom: 1px solid rgba(61,61,63, 1);
+   margin-bottom: 10px;
+   text-transform: uppercase;
+}
+.page-contents.services h2 {
+   font-size: 34px;
+   font-weight: 300;
+   padding-bottom: 20px;
+   border-bottom: 1px solid rgba(61,61,63, 1);
+   margin-bottom: 40px;
+   text-transform: uppercase;
+}
+.page-template-contactos-page h2 {
+   font-size: 34px;
+   font-weight: 500;
+   padding-bottom: 20px;
+   text-transform: uppercase;
+}
+.page-contents.services h3 {
+   font-size: 16px;
+   line-height: 22px;
+   font-weight: 500;
+   text-transform: uppercase;
+   margin-bottom: 10px;
+   color: rgba(53,48,44, .7);
+}
+.page-contents h3 {
+   margin-top: 10px;
+   font-size: 16px;
+   line-height: 22px;
+   font-weight: 500;
+   text-transform: uppercase;
+   color: rgba(53,48,44, .7);
+}
+.page-contents h3.big {
+   font-size: 24px;
+   line-height: 28px;
+   font-weight: 500;
+   text-transform: uppercase;
+   margin-top: 0;
+   margin-bottom: 15px;
+   color: rgba(53,48,44, .7);
+}
+.page-template-cv-page h3 {
+   font-size: 18px;
+}
+.page-contents h4 {
+   font-size: 30px;
+   line-height: 30px;
+   font-weight: 500;
+   font-style: italic;
+   margin-bottom: 30px;
+   color: rgba(101,166,184, 1);
+}
+.page-contents h4 span {
+   font-size: 14px;
+   line-height: 30px;
+   vertical-align: bottom;
+}
+.page-contents h4.small {
+   font-size: 18px;
+   line-height: 18px;
+   font-weight: 500;
+   font-style: normal;
+   border-top: 1px solid rgba(61,61,63, 1);
+   margin-top: 20px;
+   padding-top: 15px;
+   color: rgba(101,166,184, 1);
+}
+.page-contents h5 {
+   font-size: 14px;
+   line-height: 14px;
+   font-weight: 500;
+   text-transform: uppercase;
+   text-align: left;
+}
+.page-template-cv-page h5,
+.page-template-contactos-page h5,
+.page-template-estetica-page h5 {
+   text-align: left;
+   text-transform: initial;
+   margin-bottom: 10px;
+}
+.page-template-contactos-page h5 {
+   margin-top: 10px;
+   margin-bottom: 8px;
+   font-size: 18px;
+   color: rgba(101,166,184, 1);
+}
+.page-contents h6 {
+   font-size: 12px;
+   font-weight: 400;
+   text-transform: uppercase;
+   color: rgba(101,166,184, 1);
+   margin-bottom: 20px;
+}
+.page-contents p {
+   font-size: 17px;
+   line-height: 26px;
+}
+.page-contents .hospital-lapa {
+   width: 100px;
+}
+.page-contents .lapa-txt {
+   display: inline-block;
+   margin-left: 20px;
+}
+.page-contents a {
+   color: rgba(101,166,184, 1);
+}
+.page-contents nav ul {
+   margin: 0;
+   padding: 0;
+   list-style: none;
+}
+.page-contents nav ul > li {
+   margin-bottom: 8px;
+}
+.page-contents nav ul > li.current_page_item a {
+   color: rgba(101,166,184, 1);
+}
+.page-contents.services nav ul > li.current_page_item a {
+   color: rgba(61,61,63, .4);
+}
+.page-contents nav ul > li a {
+   font-size: 14px;
+   font-weight: 300;
+   color: rgba(61,61,63, .7);
+   text-transform: uppercase;
+}
+.page-contents nav ul > li a:hover {
+   color: rgba(61,61,63, .4);
+}
+.page-contents ol.breadcrumb {
+   background-color: white;
+   text-transform: uppercase;
+   border-bottom: 1px solid rgba(61,61,63, 1);
+   border-radius: 0;
+   padding: 10px 0px 20px;
+   margin-bottom: 30px;
+   font-size: 12px;
+   font-weight: 600;
+}
+.page-template-cv-page .page-contents ul {
+   margin: 10px 0px 30px;
+   padding: 0;
+   list-style: none;
+   font-size: 16px;
+   font-weight: 500;
+}
+.page-template-cv-page .page-contents li {
+   margin-bottom: 6px;
+}
+.questions {
+   margin-top: 30px;
+   padding: 8%;
+}
+.questions h3 {
+   font-weight: 700;
+   font-size: 26px;
+   color: white;
+}
+.questions p {
+   font-size: 16px;
+   font-weight: 300;
+   line-height: 20px;
+   margin-bottom: 20px;
+   color: white;
+}
+a.white-btn {
+   font-size: 16px;
+   background-color: transparent;
+   padding: 0 10px;
+   line-height:40px; 
+   border: 1px solid white;
+   color: white;
+   border-radius: 4px;
+}
+.white-btn:hover {
+   background-color: white;
+   border: 1px solid white;
+   color: rgba(101,166,184, 1);
+}
+a.brown-btn {
+   font-size: 16px;
+   background-color: transparent;
+   padding: 0 10px;
+   line-height:40px; 
+   border: 1px solid rgba(53,48,44, 1);
+   color: rgba(53,48,44, 1);
+   border-radius: 4px;
+}
+.brown-btn:hover {
+   background-color: rgba(53,48,44, 1);
+   border: 1px solid rgba(53,48,44, 1);
+   color: white;
+}
+.img-wrapper {
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   padding: 50px;
+}
+
+/*------------------------------------*\
+    TESTIMONIALS MENU
+\*------------------------------------*/
+
+/*ul#menu-testimonial-categories {
+   width: 80%;
+   margin: 0;
+   padding: 0;
+   list-style: none;
+}
+ul#menu-testimonial-categories li {
+   margin-bottom: 1px;  
+}
+ul#menu-testimonial-categories a {
+   display: block;
+   font-size: 14px;
+   font-weight: 500;
+   background-color: rgba(101,166,184, 1);
+   padding: 10px 20px;
+   color: white;
+}
+ul#menu-testimonial-categories a:hover, ul#menu-testimonial-categories li.current-menu-item a {
+   background-color: rgba(120,110,99, .4);
+}*/
+
+/*------------------------------------*\
+    ACCORDION
+\*------------------------------------*/
+#accordion {
+   margin-top: 30px;
+}
+#accordion p {
+   font-size: 14px;
+   line-height: 20px;
+}
+.card {
+   border: none;
+}
+.card-header {
+   border: none;
+   background-color: transparent;
+   padding-left: 0;
+}
+.card-header h5 > a {
+   font-size: 17px;
+   color: rgba(61,61,63, 1);
+   padding-left: 30px;
+   background: url(/wp-content/themes/clinica-sta-comba/img/plus-signal-01.svg) no-repeat;
+   background-position: left center;
+   background-size: 18px;
+}
+.card-block {
+   font-size: 14px;
+   padding: 10px 10px 20px 30px;
+}
+h5 > a[aria-expanded="true"] { 
+   color: rgba(101,166,184, 1);
+   background: url(/wp-content/themes/clinica-sta-comba/img/minus-signal-01.svg) no-repeat;
+   background-position: left center;
+   background-size: 18px;
+} 
+
+/*------------------------------------*\
+    IMAGES
+\*------------------------------------*/
+.fotorama {
+   margin-top: 30px;
+}
+
+/*------------------------------------*\
+    FORMULÁRIO
+\*------------------------------------*/
+form.wpcf7-form {
+   font:300 11px/1.4 "din-2014",sans-serif;
+   margin-top: 30px;
+   margin-bottom: 30px;
+}
+.form-group {
+   margin-bottom: 30px;
+}
+.form-control {
+   border-radius: 0;
+   font-size: 14px;
+   padding: 10px 0;
+   border: 1px solid #fff;
+   border-bottom: 1px solid #CCC;
+   font-style: italic;
+}
+.form-btn {
+   font-size: 16px;
+   line-height: 16px;
+   color: white;
+   border: 1px solid rgba(61,61,63, 1);
+   background-color: rgba(61,61,63, 1);
+   border-radius: 4px;
+   padding: 9px 12px 10px;
+   text-transform: uppercase;
+}
+p.small {
+   font-size: 12px;
+}
+div.wpcf7-validation-errors {
+   border: none;
+   padding: 0;
+   margin: 0;
+}
+select.form-control:not([size]):not([multiple]) {
+   height: auto;
+}
+.wpcf7-form-control.wpcf7-select.form-control {
+   border-radius: 0;
+   appearance: none;
+   -webkit-appearance: none;
+}
+
+
+/*------------------------------------*\
+    BLOG
+\*------------------------------------*/
+
+.blog article {
+   margin-bottom: 60px;
+}
+
+.attachment-post-thumbnail.size-post-thumbnail.wp-post-image {
+   margin-bottom: 30px;
+}
+.blog .calendar {
+   border-top: 5px solid rgba(120,110,99, 1);
+   background-color: rgba(120,110,99, .3);
+   padding-top: 1px;
+   padding-bottom: 6px;
+}
+.blog h2 {
+   margin-bottom: 15px;
+   font-weight: 500;
+   color: rgba(101,166,184, 1);
+}
+.blog span.date {
+   display: block;
+   text-align: center;
+   font-weight: 500;
+   text-transform: uppercase;
+}
+.blog span.date.day {
+   font-size: 20px;
+   font-weight: 600;
+}
+.blog .sidebar form {
+   margin-bottom: 40px;
+}
+.blog .sidebar .form-btn {
+   font-size: 12px;
+}
+.blog .sidebar ul {
+   margin: 0;
+   padding: 0;
+   list-style: none;
+   margin-bottom: 40px;
+}
+.blog .sidebar li {
+   padding: 4px 0px;
+}
+.blog .sidebar a {
+   font-size: 12px;
+   font-weight: 500;
+   text-transform: uppercase;
+}
+.blog .post-excerpt {
+   margin-bottom: 10px;
+   padding-bottom: 40px;
+   border-bottom: 1px solid #ccc;
+}
+
+/*------------------------------------*\
+    RESPONSIVE
+\*------------------------------------*/
+
+@media only screen and (-webkit-min-device-pixel-ratio:1.5),
+only screen and (min-resolution:144dpi) {
+
+}
+@media only screen and (min-width:1280px) {
+
+}
+/* Large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) { 
+
+
+}
+/* Medium devices (desktops, 992px and up) */
+@media (max-width: 1024px) {
+   .nav > ul > li {
+      margin-right: 20px;
+   }
+   .nav > ul > li > a {
+      font-size: 13px;
+   }
+
+}
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+   .top-bar li {
+      padding: 10px 25px;
+   }
+   .page-contents {
+      padding: 30px 5%;
+   }
+   .footer {
+      padding: 50px 5%;
+   }
+
+}
+/* Small devices (iphone5 and 6, 568px and up) */
+@media (max-width: 568px) {
+   .top-bar {
+      padding: 0;
+   }
+   .top-bar li {
+      padding: 10px 9px;
+   }
+   .top-bar li:first-child {
+      display: none;
+   }
+   .logo {
+      text-align: center;
+   }
+   .logo-img {
+      height: 80px;
+   }
+   header {
+      padding: 20px 3% 10px;
+   }
+   .nav ul {
+      display: block;
+      margin: 0;
+      padding: 0;
+      margin-top: 10px;
+      text-align: center;
+   }
+   .nav > ul > li {
+      margin: 0 5px 8px 5px;
+   }
+   .front-img {
+      margin-bottom: 20px;
+   }
+   .img-wrapper {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 50px 30px;
+   }
+   .img-wrapper h2 {
+      font-size: 18px;
+   }
+   .img-wrapper p {
+      font-size: 12px;
+      line-height: 16px;
+   }
+   a.brown-btn {
+      font-size: 14px;
+      line-height:24px; 
+   }
+   .categories-mobile, .categories-mobile:focus {
+      width: 100%;
+      outline: none;
+      background-color: transparent;
+      border-radius: 4px;
+      font-size: 12px;
+      padding: 10px;
+      border: 1px solid #CCC;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      background: url(/wp-content/themes/clinica-sta-comba/img/down-arrow.svg) no-repeat;
+      background-position: right center;
+      background-size: 18px;
+   }
+   .footer h4 {
+      margin-top: 20px;
+   }
+
+}
+/* Small devices (iphone4, 480px and up) */
+@media (max-width: 480px) {
+
+}
+
+/*------------------------------------*\
+    MISC
+\*------------------------------------*/
+
+::selection {
+   background:#04A4CC;
+   color:#FFF;
+   text-shadow:none;
+}
+::-webkit-selection {
+   background:#04A4CC;
+   color:#FFF;
+   text-shadow:none;
+}
+::-moz-selection {
+   background:#04A4CC;
+   color:#FFF;
+   text-shadow:none;
+}
+
+/*------------------------------------*\
+    WORDPRESS CORE
+\*------------------------------------*/
+
+.alignnone {
+   margin:0px 20px 20px 0;
+}
+.aligncenter,
+div.aligncenter {
+   display:block;
+   margin:5px auto 5px auto;
+}
+.alignright {
+   float:right;
+   margin:5px 0 20px 20px;
+}
+.alignleft {
+   float:left;
+   margin:5px 20px 20px 0;
+}
+a img.alignright {
+   float:right;
+   margin:5px 0 20px 20px;
+}
+a img.alignnone {
+   margin:5px 20px 20px 0;
+}
+a img.alignleft {
+   float:left;
+   margin:5px 20px 20px 0;
+}
+a img.aligncenter {
+   display:block;
+   margin-left:auto;
+   margin-right:auto;
+}
+.wp-caption {
+   background:#FFF;
+   border:1px solid #F0F0F0;
+   max-width:96%;
+   padding:5px 3px 10px;
+   text-align:center;
+}
+.wp-caption.alignnone {
+   margin:5px 20px 20px 0;
+}
+.wp-caption.alignleft {
+   margin:5px 20px 20px 0;
+}
+.wp-caption.alignright {
+   margin:5px 0 20px 20px;
+}
+.wp-caption img {
+   border:0 none;
+   height:auto;
+   margin:0;
+   max-width:98.5%;
+   padding:0;
+   width:auto;
+}
+.wp-caption .wp-caption-text,
+.gallery-caption {
+   font-size:11px;
+   line-height:17px;
+   margin:0;
+   padding:0 4px 5px;
+}
+.sticky {
+
+}
+.bypostauthor {
+
+}
+
+/*------------------------------------*\
+    PRINT
+\*------------------------------------*/
+
+@media print {
+   * {
+      background:transparent !important;
+      color:#000 !important;
+      box-shadow:none !important;
+      text-shadow:none !important;
+   }
+   a,
+   a:visited {
+      text-decoration:underline;
+   }
+   a[href]:after {
+      content:" (" attr(href) ")";
+   }
+   abbr[title]:after {
+      content:" (" attr(title) ")";
+   }
+   .ir a:after,
+   a[href^="javascript:"]:after,
+   a[href^="#"]:after {
+      content:"";
+   }
+   pre,blockquote {
+      border:1px solid #999;
+      page-break-inside:avoid;
+   }
+   thead {
+      display:table-header-group;
+   }
+   tr,img {
+      page-break-inside:avoid;
+   }
+   img {
+      max-width:100% !important;
+   }
+   @page {
+      margin:0.5cm;
+   }
+   p,
+   h2,
+   h3 {
+      orphans:3;
+      widows:3;
+   }
+   h2,
+   h3 {
+      page-break-after:avoid;
+   }
+}
